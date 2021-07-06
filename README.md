@@ -1,3 +1,3 @@
 # login-logout-upload
 
-https://nodejs--app.herokuapp.com/register
+https://nodejs--app.herokuapp.com/
