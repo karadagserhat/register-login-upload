@@ -1,5 +1,5 @@
-const oturumAcilmis = function (req,res,next) {
-    if(req.isAuthenticated()){
+const oturumAcilmis = function (req, res, next) {
+    if (req.isAuthenticated()) {
         return next();
     }
     else {
@@ -8,8 +8,8 @@ const oturumAcilmis = function (req,res,next) {
     }
 };
 
-const oturumAcilmamis = function (req,res,next) {
-    if(!req.isAuthenticated()){
+const oturumAcilmamis = function (req, res, next) {
+    if (!req.isAuthenticated()) {
         return next();
     }
     else {

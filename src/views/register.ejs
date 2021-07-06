@@ -1,14 +1,12 @@
-
-
 <div class="card o-hidden border-0 shadow-lg my-5">
     <div class="card-body p-0">
         <!-- Nested Row within Card Body -->
         <div class="row">
             <style>
                 img {
-                 height: 100%;
-                 width: 100%;
-                 
+                    height: 100%;
+                    width: 100%;
+
                 }
             </style>
             <div class="col-lg-5 d-none d-lg-block"><img src="../uploads/avatars/dog5.jpeg" alt="dog_register"></div>
@@ -16,43 +14,45 @@
                 <div class="p-5">
                     <div class="text-center">
                         <h1 class="h4 text-gray-900 mb-4">Kullanıcı Oluşturun</h1>
-                        <% if (locals.validation_error != undefined) { %>
-                         <%- include('./partials/_mesaj')  %> 
-                        <% } %>
+                        <% if (locals.validation_error !=undefined) { %>
+                            <%- include('./partials/_mesaj') %>
+                                <% } %>
                     </div>
                     <form class="user" action="/register" method="post">
                         <div class="form-group row">
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                                <input type="text" value="<%= typeof ad != 'undefined' ? ad : ''%>" name="ad" class="form-control form-control-user" id="exampleFirstName"
-                                    placeholder= "Adınız">
+                                <input type="text" value="<%= typeof ad != 'undefined' ? ad : ''%>" name="ad"
+                                    class="form-control form-control-user" id="exampleFirstName" placeholder="Adınız">
                             </div>
                             <div class="col-sm-6">
-                                <input type="text" value="<%= typeof soyad != 'undefined' ? soyad : ''%>" name="soyad" class="form-control form-control-user" id="exampleLastName"
-                                    placeholder="Soyadınız">
+                                <input type="text" value="<%= typeof soyad != 'undefined' ? soyad : ''%>" name="soyad"
+                                    class="form-control form-control-user" id="exampleLastName" placeholder="Soyadınız">
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="email" value="<%= typeof email != 'undefined' ? email : '' %> " name="email" class="form-control form-control-user" id="exampleInputEmail"
-                                placeholder="Email">
+                            <input type="email" value="<%= typeof email != 'undefined' ? email : '' %> " name="email"
+                                class="form-control form-control-user" id="exampleInputEmail" placeholder="Email">
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                                <input type="password" value="<%= typeof sifre != 'undefined' ? sifre : ''%>"  name="sifre" class="form-control form-control-user"
-                                    id="exampleInputPassword" placeholder="Şifre">
+                                <input type="password" value="<%= typeof sifre != 'undefined' ? sifre : ''%>"
+                                    name="sifre" class="form-control form-control-user" id="exampleInputPassword"
+                                    placeholder="Şifre">
                             </div>
                             <div class="col-sm-6">
-                                <input type="password" value="<%= typeof resifre != 'undefined' ? resifre : ''%>" name="resifre" class="form-control form-control-user"
-                                    id="exampleRepeatPassword" placeholder="Şifrenizi Tekrar Yazın">
+                                <input type="password" value="<%= typeof resifre != 'undefined' ? resifre : ''%>"
+                                    name="resifre" class="form-control form-control-user" id="exampleRepeatPassword"
+                                    placeholder="Şifrenizi Tekrar Yazın">
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary btn-user btn-block">
                             Kullanıcı Oluştur
                         </button>
                         <hr>
-                       
+
                     </form>
                     <hr>
-                
+
                     <div class="text-center">
                         <a class="small" href="/login">Hesabınız var mı? Giriş Yapın</a>
                     </div>

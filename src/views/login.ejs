@@ -9,29 +9,32 @@
                 <div class="row">
                     <style>
                         img {
-                         height: 100%;
-                         width: 100%;
-                         
+                            height: 100%;
+                            width: 100%;
+
                         }
                     </style>
-                    <div class="col-lg-6 d-none d-lg-block"><img src="../uploads/avatars/dog8.jpeg" alt="dog_login"></div>
+                    <div class="col-lg-6 d-none d-lg-block"><img src="../uploads/avatars/dog-1.jpeg" alt="dog_login">
+                    </div>
                     <div class="col-lg-6">
                         <div class="p-5">
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Hoş Geldiniz!</h1>
-                                <% if (locals.validation_error != undefined || locals.success_message != undefined || locals.login_error != undefined) { %>
-                                    <%- include('./partials/_mesaj')  %> 
-                                   <% } %>
+                                <% if (locals.validation_error !=undefined || locals.success_message !=undefined ||
+                                    locals.login_error !=undefined) { %>
+                                    <%- include('./partials/_mesaj') %>
+                                        <% } %>
                             </div>
-                            <form class="user" action="/login", method="post">
+                            <form class="user" action="/login" , method="post">
                                 <div class="form-group">
-                                    <input type="email" value="<%= typeof email != 'undefined' ? email : ''%>" name="email" class="form-control form-control-user"
-                                        id="exampleInputEmail" aria-describedby="emailHelp"
-                                        placeholder="Email">
+                                    <input type="email" value="<%= typeof email != 'undefined' ? email : ''%>"
+                                        name="email" class="form-control form-control-user" id="exampleInputEmail"
+                                        aria-describedby="emailHelp" placeholder="Email">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" value="<%= typeof sifre != 'undefined' ? sifre : ''%>" name="sifre" class="form-control form-control-user"
-                                        id="exampleInputPassword" placeholder="Şifre">
+                                    <input type="password" value="<%= typeof sifre != 'undefined' ? sifre : ''%>"
+                                        name="sifre" class="form-control form-control-user" id="exampleInputPassword"
+                                        placeholder="Şifre">
                                 </div>
                                 <div class="form-group">
                                     <div class="custom-control custom-checkbox small">
@@ -42,10 +45,10 @@
                                     Giriş
                                 </button>
                                 <hr>
-                                
+
                             </form>
                             <hr>
-                            
+
                             <div class="text-center">
                                 <a class="small" href="/register">Kayıt Ol!</a>
                             </div>
